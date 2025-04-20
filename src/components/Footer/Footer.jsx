@@ -1,6 +1,6 @@
 import React from "react";
-import Logo from "../../assets/logo.png";
-import { FaPhone } from "react-icons/fa6";
+import Logo from "../../assets/nobglogo.png";
+import { FaPhone, FaInstagram } from "react-icons/fa6";
 import { LuMessageSquare } from "react-icons/lu";
 import { motion } from "framer-motion";
 import { SlideLeft } from "../../animation/animate";
@@ -11,74 +11,58 @@ const Footer = () => {
       variants={SlideLeft(0.2)}
       initial="initial"
       whileInView="animate"
+      className="bg-[#5e4a71] py-14 text-white"
     >
-      <div className="container py-11">
+      <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Company info section */}
-          <div className="space-y-4 font-semibold">
-            <div className="flex items-center space-x-3">
-              <img src={Logo} alt="" className="w-6" />
-              <p className="text-xl font-semibold">Interior</p>
-            </div>
-            <p>Greater Noida, Uttar Pradesh, India</p>
-            <p>@ 2024 TCJ All rights reserved</p>
-          </div>
-          {/* Footer Link */}
-          <div className="grid grid-cols-2 gap-3">
-            <div className="space-y-4">
-              <h1 className="text-xl font-semibold">About us</h1>
-              <ul className="text-sm space-y-4">
-                <li>
-                  <a href="#">Our Story</a>
-                </li>
-                <li>
-                  <a href="#">Designer</a>
-                </li>
-                <li>
-                  <a href="#">Craftmanship</a>
-                </li>
-                <li>
-                  <a href="#">Sustainability</a>
-                </li>
-              </ul>
-            </div>
-            <div className="space-y-4">
-              <h1 className="text-xl font-semibold">Support</h1>
-              <ul className="text-sm space-y-4">
-                <li>
-                  <a href="#">FAQ's</a>
-                </li>
-                <li>
-                  <a href="#">Shipping & Returns</a>
-                </li>
-                <li>
-                  <a href="#">Care Guide</a>
-                </li>
-                <li>
-                  <a href="#">Guaranty</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          {/* Contact section */}
+          {/* Company Info */}
           <div className="space-y-4">
-            <h1 className="text-xl font-semibold">Contact us</h1>
-            <ul className="text-base font-semibold space-y-4">
+            <div className="flex items-center space-x-3">
+              <img src={Logo} alt="Scented Aura Logo" className="w-14" />
+              <p className="text-2xl font-semibold">Scented Aura</p>
+            </div>
+            <p className="text-sm opacity-80">Karachi, Pakistan</p>
+            <p className="text-sm opacity-60">@ 2025 Scented Aura, All Rights Reserved</p>
+          </div>
+
+          {/* About Us */}
+          <div className="space-y-4 mt-4">
+            <h1 className="text-xl font-semibold">About Us</h1>
+            <p className="text-sm opacity-80 leading-7">
+              At Scented Aura, we blend luxury and elegance to create aromatic products that elevate your space.
+            </p>
+          </div>
+
+          {/* Contact */}
+          <div className="space-y-4 mt-4">
+            <h1 className="text-xl font-semibold">Contact Us</h1>
+            <ul className="text-sm space-y-3">
               <li className="flex items-center space-x-3">
-                <FaPhone />
-                <a href="#">+91 123456789</a>
+                <FaPhone className="text-white" />
+                <a href="tel:+123456789" className="hover:underline">+9230000000</a>
               </li>
               <li className="flex items-center space-x-3">
-                <LuMessageSquare />
-                <a href="mailto:contact.thecodingjourney@gmail.com">Email</a>
+                <LuMessageSquare className="text-white" />
+                <a href="mailto:scentedaura@gmail.com" className="hover:underline">scentedaura@gmail.com</a>
+              </li>
+              <li className="flex items-center space-x-3">
+                <FaInstagram className="text-white" />
+                <a
+                  href="https://www.instagram.com/scented_auraa/?igsh=MXJibjZxYWU0eXk2ag%3D%3D#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  @scented_auraa
+                </a>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* bottom section */}
-        <p className="text-center text-sm font-semibold  border-t-2 pt-5 mt-5">
-          &copy; 2023 TCJ. All rights reserved
+        {/* Bottom Text */}
+        <p className="text-center text-sm font-semibold opacity-70 border-t border-white/30 pt-5 mt-5">
+          &copy; 2025 Scented Aura. All rights reserved.
         </p>
       </div>
     </motion.footer>

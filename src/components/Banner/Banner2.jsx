@@ -1,74 +1,80 @@
 import React from "react";
-import Banner1 from "../../assets/banner2.png";
+import img2 from "../../assets/img2.png";
 import { motion } from "framer-motion";
 import { SlideUp } from "../../animation/animate";
 
 const Banner2 = () => {
   return (
-    <div>
-      <div className="container py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {/* text section */}
-          <div className="space-y-5 flex justify-center flex-col xl:max-w-[500px]">
+    <div className="bg-[#fdfaf6] py-14">
+      <div className="container">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          {/* Text Section */}
+          <div className="space-y-5 xl:max-w-[500px]">
             <motion.h1
               variants={SlideUp(0.2)}
               initial="initial"
               whileInView="animate"
-              className="text-4xl font-bold font-serif"
+              className="text-4xl font-serif font-bold text-[#5e4a71]"
             >
-              Simple way to make stylish living room
+              Because a Beautiful Home Deserves a Beautiful Scent
             </motion.h1>
             <motion.p
               variants={SlideUp(0.4)}
               initial="initial"
               whileInView="animate"
-              className="text-gray-500 text-sm leading-7"
+              className="text-[#7a7680] text-sm leading-7"
             >
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit
-              earum accusantium tempore nam adipisicing elit. Suscipit earum
-              accusantium tempore nam aliquid{" "}
+              Fragrance isn’t just a scent — it’s a feeling your home deserves. <br />
+              Our scented wax sachets blend elegance and aroma to elevate every corner of your home.
             </motion.p>
             <motion.div
               variants={SlideUp(0.6)}
               initial="initial"
               whileInView="animate"
-              className="flex gap-3"
+              className="flex gap-6"
             >
-              <div className="max-w-[80px] space-y-2">
-                <p className="text-3xl font-bold font-serif">15</p>
-                <p className="text-gray-500 text-sm">Years of Experience</p>
+              {/* Stats Section */}
+              <div className="max-w-[80px] space-y-2 text-center">
+                <p className="text-xl font-bold font-serif text-[#5e4a71]">100%</p>
+                <p className="text-[#7a7680] text-sm">Handcrafted with Love</p>
               </div>
-              <div className="max-w-[80px] space-y-2">
-                <p className="text-3xl font-bold font-serif">350</p>
-                <p className="text-gray-500 text-sm">Happy Clients</p>
+              <div className="max-w-[80px] space-y-2 text-center">
+                <p className="text-xl font-bold font-serif text-[#5e4a71]">5⭐</p>
+                <p className="text-[#7a7680] text-sm">Customer Satisfaction</p>
               </div>
-              <div className="max-w-[80px] space-y-2">
-                <p className="text-3xl font-bold font-serif">34</p>
-                <p className="text-gray-500 text-sm">Award Gained</p>
+              <div className="max-w-[80px] space-y-2 text-center">
+                <p className="text-xl font-bold font-serif text-[#5e4a71]">2025</p>
+                <p className="text-[#7a7680] text-sm">Launched in</p>
               </div>
             </motion.div>
-            <div>
+            {/* Button */}
+            <motion.div
+              variants={SlideUp(0.8)}
+              initial="initial"
+              whileInView="animate"
+            >
               <motion.button
                 variants={SlideUp(0.6)}
                 initial="initial"
                 whileInView="animate"
-                className="primary-btn bg-black text-white shadow-[5px_5px_0px_0px_#6c6c6c]"
+                className="inline-block px-6 py-2 bg-[#7f6a93] text-white rounded-full shadow-md hover:bg-[#5e4a71] transition-all duration-300"
               >
                 Contact Us
               </motion.button>
-            </div>
+            </motion.div>
           </div>
-          {/* image section */}
-          <div className="flex flex-col justify-center  ">
+
+          {/* Image Section */}
+          <motion.div className="flex justify-center">
             <motion.img
               initial={{ x: 100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              src={Banner1}
-              alt=""
-              className="w-[95%] md:w-full mx-auto"
+              src={img2}
+              alt="Beautiful Home"
+              className="w-[95%] md:w-full mx-auto rounded-xl shadow-lg"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

@@ -4,14 +4,17 @@ import { FaPenToSquare } from "react-icons/fa6";
 import { BiSolidDollarCircle } from "react-icons/bi";
 import { motion } from "framer-motion";
 import { SlideUp } from "../../animation/animate";
+import { FaLeaf, FaPaintBrush, FaCubes, FaHome } from "react-icons/fa";
+import { GiFragrance, GiReceiveMoney } from "react-icons/gi";
+import { MdOutlineDesignServices } from "react-icons/md";
 
 const ServiceCard = [
   {
     id: 1,
-    title: "Luxury Facilities",
+    title: "Long-Lasting Fragrance",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit,Lorem ipsum dolor sit amet, consectetur",
-    icon: <FaVectorSquare />,
+      "Our scents are designed to linger, leaving a gentle, refreshing aura in your space.",
+    icon: <GiFragrance />,
     link: "#",
     delay: 0.2,
   },
@@ -19,8 +22,8 @@ const ServiceCard = [
     id: 2,
     title: "Quality Products",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit,Lorem ipsum dolor sit amet, consectetur",
-    icon: <FaPenToSquare />,
+      "Crafted with premium ingredients and care to ensure long-lasting quality and performance.",
+    icon: <FaCubes />,
     link: "#",
     delay: 0.4,
   },
@@ -28,61 +31,90 @@ const ServiceCard = [
     id: 3,
     title: "Affordable Price",
     description:
-      "Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
-    icon: <BiSolidDollarCircle />,
+      "Luxury doesn't have to break the bank. Beautiful fragrances at honest prices.",
+    icon: <GiReceiveMoney />,
     link: "#",
     delay: 0.6,
+  },
+  {
+    id: 4,
+    title: "Aesthetic Home Decor",
+    description:
+      "Our wax products are as beautiful as they are functional — perfect for any décor style.",
+    icon: <FaHome />,
+    link: "#",
+    delay: 0.8,
+  },
+  {
+    id: 5,
+    title: "Custom Designs Available",
+    description:
+      "Personalized wax sachets and candles tailored to your vision, style, or occasion.",
+    icon: <MdOutlineDesignServices />,
+    link: "#",
+    delay: 1.0,
+  },
+  {
+    id: 6,
+    title: "Eco-Friendly & Natural",
+    description:
+      "Made with eco-conscious materials and natural essential oils, safe for you and the planet.",
+    icon: <FaLeaf />,
+    link: "#",
+    delay: 1.2,
   },
 ];
 const Services = () => {
   return (
-    <div>
-      <div className="container py-20">
-        {/* heading title */}
-        <div className="space-y-2 text-center max-w-[350px] mx-auto mb-8">
+    <div className="bg-[#fdfaf6] py-20"
+    id="provide" 
+    >
+      <div className="container">
+        {/* Heading Section */}
+        <div className="space-y-2 text-center max-w-[400px] mx-auto mb-12">
           <motion.h1
             variants={SlideUp(0.2)}
             initial="initial"
             whileInView={"animate"}
-            className="text-3xl font-bold font-serif"
+            className="text-4xl font-bold font-serif text-[#5e4a71]"
           >
-            What we provide
+            What We Provide
           </motion.h1>
           <motion.p
             variants={SlideUp(0.4)}
             initial="initial"
             whileInView={"animate"}
-            className="text-gray-500 text-sm"
+            className="text-[#7a7680] text-sm"
           >
-            Bring your dream home to life with one-on-one design help & hand
-            picked products
+            Bring your dream home to life with one-on-one design help & handpicked products.
           </motion.p>
         </div>
-        {/* card section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {ServiceCard.map((card) => {
-            return (
-              <motion.div
-                variants={SlideUp(card.delay)}
-                initial="initial"
-                whileInView={"animate"}
-                key={card.id}
-                className="space-y-4 border-[1px] border-black/30 px-6 py-12 hover:bg-black hover:text-white hover:shadow-[7px_7px_0px_0px_#6c6c6c] duration-300"
+
+        {/* Card Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {ServiceCard.map((card) => (
+            <motion.div
+              variants={SlideUp(card.delay)}
+              initial="initial"
+              whileInView={"animate"}
+              key={card.id}
+              className="space-y-4 border border-[#e0d9d0] px-6 py-10 rounded-xl bg-white text-[#5e4a71] hover:bg-[#7f6a93] hover:text-white hover:shadow-[6px_6px_0px_0px_#5e4a71] transition-all duration-300"
+            >
+              <span className="inline-block text-2xl border border-[#5e4a71] rounded-full p-4 bg-white text-[#5e4a71] hover:bg-white hover:text-[#7f6a93] transition-all">
+                {card.icon}
+              </span>
+              <p className="text-xl font-bold font-serif">{card.title}</p>
+              <p className="text-sm text-[#8d8a85] leading-relaxed">
+                {card.description}
+              </p>
+              <a
+                href={card.link}
+                className="inline-block border-b border-[#5e4a71] hover:border-white transition"
               >
-                <span className="inline-block text-xl border-[1px] border-black rounded-full p-3">
-                  {card.icon}
-                </span>
-                <p className="text-2xl font-bold font-serif">{card.title}</p>
-                <p className="text-gray-400 text-xs">{card.description}</p>
-                <a
-                  href={card.link}
-                  className="inline-block border-b border-black"
-                >
-                  Learn More
-                </a>
-              </motion.div>
-            );
-          })}
+                Learn More
+              </a>
+            </motion.div>
+          ))}
         </div>
       </div>
     </div>
