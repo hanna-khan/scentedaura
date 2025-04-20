@@ -1,5 +1,5 @@
 import React from "react";
-import HeroPng from "@assets/herobgimg.png";
+import HeroPng from "../../assets/herobgimg.png";
 import { motion } from "framer-motion";
 import { SlideUp } from "../../animation/animate";
 

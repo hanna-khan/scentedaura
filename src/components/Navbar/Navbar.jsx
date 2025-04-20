@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "@assets/nobglogo.png";
+import Logo from "../../assets/nobglogo.png";
 import { motion } from "framer-motion";
 
 const NavLinks = [
