@@ -1,6 +1,6 @@
 import React from "react";
-import Banner1 from "../../assets/banner.png";
-import aboutus from "../../assets/aboutus.png";
+import Banner1 from "@assets/banner.png";
+import aboutus from "@assets/aboutus.png";
 import { motion } from "framer-motion";
 import { SlideUp } from "../../animation/animate";
 

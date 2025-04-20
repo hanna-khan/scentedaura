@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../assets/nobglogo.png";
+import Logo from "@assets/nobglogo.png";
 import { FaPhone, FaInstagram } from "react-icons/fa6";
 import { LuMessageSquare } from "react-icons/lu";
 import { motion } from "framer-motion";

@@ -1,9 +1,9 @@
 import React from "react";
-import Brand1 from "../../assets/brand/1.png";
-import Brand2 from "../../assets/brand/2.png";
-import Brand3 from "../../assets/brand/3.png";
-import Brand4 from "../../assets/brand/4.png";
-import Brand5 from "../../assets/brand/5.png";
+import Brand1 from "@assets/brand/1.png";
+import Brand2 from "@assets/brand/2.png";
+import Brand3 from "@assets/brand/3.png";
+import Brand4 from "@assets/brand/4.png";
+import Brand5 from "@assets/brand/5.png";
 import { motion } from "framer-motion";
 import { SlideLeft } from "../../animation/animate";
 const Brands = () => {

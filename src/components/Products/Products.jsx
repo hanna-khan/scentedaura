@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { SlideUp } from "../../animation/animate";
-import ProductOne from "../../assets/productone.png";
+import ProductOne from "@assets/productone.png";
 
 const productData = [
   {

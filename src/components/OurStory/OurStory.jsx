@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { SlideUp } from "../../animation/animate";
-import womenteam from "../../assets/womenteam.png"; // Add any team/illustrative image you like
+import womenteam from "@assets/womenteam.png"; // Add any team/illustrative image you like
 
 const OurStory = () => {
   return (
