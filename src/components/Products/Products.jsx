@@ -1,92 +1,33 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { SlideUp } from "../../animation/animate";
-import ProductOne from "../../assets/productone.png";
+import ProductOne from "../../assets/products/product1.jpg";
+import ProductTwo from "../../assets/products/product2.jpg";
+import ProductThree from "../../assets/products/product3.jpg";
+import ProductFour from "../../assets/products/product9.jpg";
+import ProductFive from "../../assets/products/product8.jpg";
 
 const productData = [
   {
     id: 1,
-    name: "Lavender Bliss",
-    price: "$12.99",
-    description: "Soothing lavender wax sachet with dried florals.",
-    image: ProductOne,
+    name: "Large size",
+    price: "Rs 399",
+    description: "Elevate your space with our large lavender wax sachet, enriched with dried florals for a calming and elegant aroma.",
+    image: ProductFour,
   },
   {
     id: 2,
-    name: "Citrus Zest",
-    price: "$10.50",
-    description: "Bright citrus scent with a burst of freshness.",
-    image: ProductOne,
+    name: "2 Small size",
+    price: "Rs 99",
+    description: "A duo of vibrant citrus-scented sachets that add a fresh, energizing touch to drawers, closets, or your workspace.",
+    image: ProductTwo,
   },
   {
     id: 3,
-    name: "Rose Garden",
-    price: "$14.99",
-    description: "Delicate rose fragrance in an elegant sachet.",
-    image: ProductOne,
-  },
-  {
-    id: 4,
-    name: "Vanilla Amber",
-    price: "$11.75",
-    description: "Warm vanilla with hints of amber spice.",
-    image: ProductOne,
-  },
-  {
-    id: 5,
-    name: "Ocean Breeze",
-    price: "$13.20",
-    description: "Fresh marine scent for a relaxing feel.",
-    image: ProductOne,
-  },
-  {
-    id: 6,
-    name: "Sandalwood Calm",
-    price: "$15.00",
-    description: "Earthy sandalwood with calming tones.",
-    image: ProductOne,
-  },
-  {
-    id: 7,
-    name: "Lemon Verbena",
-    price: "$12.30",
-    description: "Clean, crisp lemon scent for energy boost.",
-    image: ProductOne,
-  },
-  {
-    id: 8,
-    name: "Peach Blossom",
-    price: "$13.50",
-    description: "Sweet peach notes with floral undertones.",
-    image: ProductOne,
-  },
-  {
-    id: 9,
-    name: "Jasmine Dream",
-    price: "$14.10",
-    description: "Dreamy jasmine that soothes the senses.",
-    image: ProductOne,
-  },
-  {
-    id: 10,
-    name: "Cinnamon Spice",
-    price: "$11.00",
-    description: "Cozy cinnamon & clove in a soft wax base.",
-    image: ProductOne,
-  },
-  {
-    id: 11,
-    name: "Eucalyptus Mint",
-    price: "$12.60",
-    description: "Refreshing mint with herbal eucalyptus.",
-    image: ProductOne,
-  },
-  {
-    id: 12,
-    name: "Floral Escape",
-    price: "$13.99",
-    description: "Bouquet-inspired design with mixed florals.",
-    image: ProductOne,
+    name: "Medium size",
+    price: "Rs 349",
+    description: "Experience subtle luxury with our rose-scented wax sachet, blending soft floral notes with a timeless feel.",
+    image: ProductThree,
   },
 ];
 
@@ -101,7 +42,7 @@ const Products = () => {
 
   return (
     <div className="bg-[#fdfaf6] py-20"
-    id="products" 
+      id="products"
     >
       <div className="container">
         {/* Section Heading */}
@@ -130,7 +71,8 @@ const Products = () => {
               <img
                 src={product.image}
                 alt={product.name}
-                className="h-56 w-full object-cover"
+                style={{ height: '20rem' }}
+                className=" w-full object-cover"
               />
               <div className="p-4 text-[#5e4a71]">
                 <h3 className="text-lg font-semibold">{product.name}</h3>
@@ -141,19 +83,6 @@ const Products = () => {
           ))}
         </div>
 
-        {/* Load More Button */}
-        {visibleCount < 12 && (
-          <div className="text-center mt-10">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={handleLoadMore}
-              className="px-6 py-2 bg-[#7f6a93] text-white rounded-full shadow-md hover:bg-[#5e4a71] transition-all"
-            >
-              Load More
-            </motion.button>
-          </div>
-        )}
       </div>
     </div>
   );

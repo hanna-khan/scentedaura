@@ -2,6 +2,7 @@ import React from "react";
 import img2 from "../../assets/img2.png";
 import { motion } from "framer-motion";
 import { SlideUp } from "../../animation/animate";
+import ProductFour from "../../assets/products/product9.jpg";
 
 const Banner2 = () => {
   return (
