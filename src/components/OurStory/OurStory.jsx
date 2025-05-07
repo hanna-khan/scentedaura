@@ -16,7 +16,7 @@ const OurStory = () => {
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <img src={womenteam} alt="Our Story" className="rounded-2xl shadow-md w-full max-w-[500px] mx-auto" />
+          <img src={group} alt="Our Story" className="rounded-2xl shadow-md w-full max-w-[500px] mx-auto" />
         </motion.div>
 
         {/* Text Section */}
